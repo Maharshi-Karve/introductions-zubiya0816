@@ -1,0 +1,44 @@
+#include <studio.h> 
+
+struct node {   
+    int data;
+    node* next; 
+}
+
+void insert(Node *head, int value) { 
+    struct node* newnode = malloc(sizeof(struct node)) 
+    newnode.data = value; 
+    newnode.next = NULL;
+
+    if head == NULL  
+        head = newnode;
+    else {
+        temp = head; 
+        while (temp->next != NULL)
+            temp = temp->next;
+        temp->next == newnode; 
+    }
+}
+
+void printList(struct node *head) {
+    if head = NULL 
+        printf("list empty\n");
+
+    while (head != NULL) {
+        printf("%f -> ", head->data); 
+        head = head.next; 
+    }
+    printf("null\n");
+}
+
+int main() {
+    struct node head = NULL; 
+
+    insert(&head, 10);  
+    insert(&head, 20);
+    insert(&head, "30"); 
+
+    printList(head);
+
+    return 0
+}
